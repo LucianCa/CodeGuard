@@ -1,24 +1,38 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  padding: 40px;
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background-color: #0f0f23;
   color: white;
+}
+
+.App {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 
-h1 {
-  font-size: 3rem;
+.App-main {
+  padding: 2rem;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-section h2 {
+  font-size: 2.5rem;
   margin-bottom: 1rem;
+  color: #e2e8f0;
 }
 
-p {
+.hero-section p {
   font-size: 1.2rem;
   opacity: 0.8;
+  line-height: 1.6;
 }
