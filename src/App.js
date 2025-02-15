@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import Header from './components/Header';
+import ContractAnalyzer from './components/ContractAnalyzer';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
           <h2>Secure Your Smart Contracts</h2>
           <p>Advanced vulnerability detection and security analysis for Ethereum smart contracts</p>
         </div>
+        <ContractAnalyzer />
       </main>
     </div>
   );
