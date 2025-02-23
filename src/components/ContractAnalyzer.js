@@ -14,11 +14,21 @@ const ContractAnalyzer = () => {
       const vulnerabilities = detectVulnerabilities(contractCode);
       const score = calculateSecurityScore(vulnerabilities);
 
-      setResults({
+      const analysisResult = {
         vulnerabilities,
         score,
         timestamp: new Date().toISOString()
-      });
+      };
+
+      setResults(analysisResult);
+
+      const history = JSON.parse(localStorage.getItem('codeguard_history') || '[]');
+      history.unshift(analysisResult);
+      if (history.length > 10) {
+        history.pop();
+      }
+      localStorage.setItem('codeguard_history', JSON.stringify(history));
+
       setAnalyzing(false);
     }, 1500);
   };
